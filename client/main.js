@@ -31,7 +31,7 @@ async function generateImageRequest(prompt, size) {
 
     console.log("sizee==>", imageSize);
 
-    const response = await fetch("http://localhost:8000/message", {
+    const response = await fetch("https://codex-rb6l.onrender.com/message", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
