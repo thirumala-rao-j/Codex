@@ -18,7 +18,8 @@ app.use(express.json());
 app.get("/", async (req, res) => {
   res.status(200).send({
     message: "Hello from Codex",
-    ip: req.ip
+    ip: req.ip,
+    ipAddress: req.headers['x-forwarded-for'] || req.connection.remoteAddress
   });
 });
 
